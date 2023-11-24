@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build-html:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: 3.12
+        cache: 'pip'
+    - name: Install Python Dependencies
+      run: |
+        pip install -r source/requirements.txt
+    - name: Build HTML
+      run: |
+        make html
+    - name: Archive HTML
+      uses: actions/upload-artifact@v3
+      with:
+        name: frc-atlas-html
+        path: build/html/
+        if-no-files-found: error
