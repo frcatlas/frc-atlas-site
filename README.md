@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/frc-atlas-site/badge/?version=latest)](https://frcatlas.org/en/latest/?badge=latest)
+
 # FRC Atlas
 
 ## License
