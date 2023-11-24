@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'FRC Atlas'
-copyright = '2023, FRC Atlas Contributors'
+copyright = '2023, FRC Atlas Contributors. This work is licensed under the terms of the Creative Commons Attribution 4.0 International License'
 author = 'FRC Atlas Contributors'
 
 
