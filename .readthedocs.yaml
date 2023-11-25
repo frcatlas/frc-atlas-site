@@ -8,6 +8,7 @@ build:
 sphinx:
   builder: html
   configuration: source/conf.py
+  fail_on_warning: true
 
 formats:
   - htmlzip
