@@ -51,4 +51,11 @@ html_theme = "furo"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_title = 'FRC Atlas'
+# Sidebar logo
+html_logo = "assets/frc-atlas-logo-rect.png"
+
+# URL favicon
+html_favicon = "assets/favicon.png"
+
+# URL title
+html_title = ' '
