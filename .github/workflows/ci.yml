@@ -1,4 +1,4 @@
-name: CI
+name: ci
 
 on:
   push:
@@ -15,15 +15,40 @@ jobs:
       with:
         python-version: 3.12
         cache: 'pip'
-    - name: Install Python Dependencies
+    - name: install python dependencies
       run: |
         pip install -r source/requirements.txt
-    - name: Build HTML
+    - name: build html
       run: |
         make html
-    - name: Archive HTML
+    - name: archive html
       uses: actions/upload-artifact@v3
       with:
         name: frc-atlas-html
         path: build/html/
+        if-no-files-found: error
+
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: 3.12
+        cache: 'pip'
+    - name: install python dependencies
+      run: |
+        pip install -r source/requirements.txt
+    - name: install latex
+      run: |
+        sudo apt-fast -y update
+        sudo apt-fast install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+    - name: build pdf
+      run: |
+        make latexpdf
+    - name: archive pdf
+      uses: actions/upload-artifact@v3
+      with:
+        name: frc-atlas-pdf
+        path: build/latex/frcatlas.pdf
         if-no-files-found: error
