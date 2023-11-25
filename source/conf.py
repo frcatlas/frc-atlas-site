@@ -58,4 +58,8 @@ html_logo = "assets/frc-atlas-logo-rect.png"
 html_favicon = "assets/favicon.png"
 
 # URL title
-html_title = ' '
+html_title = 'FRC Atlas'
+
+html_theme_options = {
+    "sidebar_hide_name": True,
+}
