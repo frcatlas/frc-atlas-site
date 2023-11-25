@@ -28,7 +28,14 @@ author = 'FRC Atlas Contributors'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "sphinx_design",
+    "sphinxext.remoteliteralinclude",
+    "hoverxref.extension",
+    "notfound.extension",
+
 ]
+
+hoverxref_roles = ["term"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
