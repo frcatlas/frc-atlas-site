@@ -1,4 +1,5 @@
-[![Documentation Status](https://readthedocs.org/projects/frc-atlas-site/badge/?version=latest)](https://frcatlas.org/en/latest/?badge=latest)
+![Read the Docs](https://img.shields.io/readthedocs/frc-atlas-site)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/frcatlas/frc-atlas-site/ci.yml)
 
 # FRC Atlas
 
